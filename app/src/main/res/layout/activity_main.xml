@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_margin="16dp"
+    android:background="@drawable/background"
+    tools:context="com.example.compradoresdecoconutnut.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:id="@+id/name_view"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:id="@+id/address_view"
+        android:layout_below="@+id/name_edit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:id="@+id/email_view"
+        android:layout_below="@+id/address_edit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:id="@+id/phone_view"
+        android:layout_below="@+id/email_edit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coconuts bought"
+        android:id="@+id/coconut_view"
+        android:layout_below="@+id/phone_edit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_edit"
+        android:layout_alignTop="@+id/name_view"
+        android:layout_toRightOf="@+id/name_view"
+        android:layout_toEndOf="@+id/name_view" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/address_edit"
+        android:layout_alignTop="@+id/address_view"
+        android:layout_toRightOf="@+id/address_view"
+        android:layout_toEndOf="@+id/address_view" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email_edit"
+        android:layout_below="@+id/address_edit"
+        android:layout_toRightOf="@+id/email_view"
+        android:layout_toEndOf="@+id/email_view" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone_edit"
+        android:layout_alignTop="@+id/phone_view"
+        android:layout_toRightOf="@+id/email_view"
+        android:layout_toEndOf="@+id/email_view" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/coconut_edit"
+        android:layout_alignTop="@+id/coconut_view"
+        android:layout_toRightOf="@+id/phone_view"
+        android:layout_toEndOf="@+id/phone_view" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Data"
+        android:id="@+id/button_add"
+        android:background="#4bf442"
+        android:layout_below="@+id/coconut_edit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:onClick="addClient"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All"
+        android:id="@+id/button_viewAll"
+        android:background="#f4f141"
+        android:layout_below="@+id/coconut_edit"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/button_add"
+        android:layout_toRightOf="@id/button_add"
+        android:layout_centerHorizontal="true"
+        android:onClick="showAllRows"/>
+
+    <EditText
+        android:id="@+id/deleteClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_findName"
+        android:layout_alignLeft="@+id/button_delete"
+        android:layout_alignStart="@+id/button_delete" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete (by name)"
+        android:background="#e01616"
+        android:id="@+id/button_delete"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/deleteClient"
+        android:onClick="deleteClient"/>
+
+    <EditText
+        android:id="@+id/nameToFind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/button_add"
+        android:layout_alignLeft="@+id/button_findName"
+        android:layout_alignStart="@+id/button_findName" />
+
+    <EditText
+        android:id="@+id/idToFind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_viewAll"
+        android:layout_toRightOf="@+id/button_findName"
+        android:layout_toEndOf="@+id/button_findName" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find by Name"
+        android:id="@+id/button_findName"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/nameToFind"
+        android:onClick="findByName"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find by Id"
+        android:id="@+id/button_findId"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/idToFind"
+        android:layout_toRightOf="@+id/button_findName"
+        android:layout_toEndOf="@+id/button_findName"
+        android:onClick="findById"/>
+
+    <TextView
+        android:id="@+id/warningText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/button_delete"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/idToFind"
+        android:layout_toRightOf="@+id/idToFind" />
+</RelativeLayout>
